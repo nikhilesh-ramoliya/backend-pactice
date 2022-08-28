@@ -9,7 +9,8 @@ app.use(Express.json());
 app.get("/", (req,res)=>{
     res.send("hello world")
 })
+const port = 3000||process.env.PORT
 
-app.listen(3000||process.env.PORT, ()=>{
-    console.log("server is running at port 3000");
+app.listen(port, ()=>{
+    console.log("server is running at port : " + port );
 })
